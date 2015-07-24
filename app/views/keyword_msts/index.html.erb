@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Keyword Msts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keyword</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @keyword_msts.each do |keyword_mst| %>
+      <tr>
+        <td><%= keyword_mst.keyword %></td>
+        <td><%= link_to 'Show', keyword_mst %></td>
+        <td><%= link_to 'Edit', edit_keyword_mst_path(keyword_mst) %></td>
+        <td><%= link_to 'Destroy', keyword_mst, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Keyword mst', new_keyword_mst_path %>

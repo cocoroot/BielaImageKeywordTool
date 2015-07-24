@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Keyword Stores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image mst</th>
+      <th>Keyword mst</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @keyword_stores.each do |keyword_store| %>
+      <tr>
+        <td><%= keyword_store.image_mst_id %></td>
+        <td><%= keyword_store.keyword_mst_id %></td>
+        <td><%= link_to 'Show', keyword_store %></td>
+        <td><%= link_to 'Edit', edit_keyword_store_path(keyword_store) %></td>
+        <td><%= link_to 'Destroy', keyword_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Keyword store', new_keyword_store_path %>

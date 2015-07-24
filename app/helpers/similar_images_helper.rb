@@ -1,0 +1,2 @@
+module SimilarImagesHelper
+end

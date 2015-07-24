@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image mst:</strong>
+  <%= @keyword_store.image_mst_id %>
+</p>
+
+<p>
+  <strong>Keyword mst:</strong>
+  <%= @keyword_store.keyword_mst_id %>
+</p>
+
+<%= link_to 'Edit', edit_keyword_store_path(@keyword_store) %> |
+<%= link_to 'Back', keyword_stores_path %>

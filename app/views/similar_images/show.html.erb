@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image msts:</strong>
+  <%= @similar_image.image_msts_id %>
+</p>
+
+<p>
+  <strong>Keyword msts:</strong>
+  <%= @similar_image.keyword_msts_id %>
+</p>
+
+<p>
+  <strong>Inner product:</strong>
+  <%= @similar_image.inner_product %>
+</p>
+
+<%= link_to 'Edit', edit_similar_image_path(@similar_image) %> |
+<%= link_to 'Back', similar_images_path %>

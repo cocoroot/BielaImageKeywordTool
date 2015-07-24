@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Keyword Ignores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image mst</th>
+      <th>Keyword mst</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @keyword_ignores.each do |keyword_ignore| %>
+      <tr>
+        <td><%= keyword_ignore.image_mst_id %></td>
+        <td><%= keyword_ignore.keyword_mst_id %></td>
+        <td><%= link_to 'Show', keyword_ignore %></td>
+        <td><%= link_to 'Edit', edit_keyword_ignore_path(keyword_ignore) %></td>
+        <td><%= link_to 'Destroy', keyword_ignore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Keyword ignore', new_keyword_ignore_path %>

@@ -1,0 +1,45 @@
+<script type="text/javascript">
+$(function(){
+	$(".biela").imgCheckbox();
+
+	$(".biela").submit(function() {
+		$("body").css({"opacity": 0}).animate({"opacity": 1}, "fast");
+		$(".formoutput").text($(this).serialize());
+		return false;
+	});
+})
+
+$(window).keyup(function(e){
+	var key_code = e.keyCode;
+	if (49 <= key_code && key_code <= 53) {
+	var str = ':checkbox[name="image_mst_id[]"][id=';
+	str = str + (key_code-49);
+	str = str + ']';
+	$(str).prop('checked',!$(str).prop('checked'));
+	}
+	if (key_code == 13) {
+		$("form").submit()
+	}
+});
+</script>
+
+
+<center><h1><%= @keyword.keyword %></h1>
+<%= form_for(@keyword_store) do |f| %>
+<table border="1" >
+<tr>
+  <% @images.each_with_index  do |image,i| %>
+	
+      <td> <input type="checkbox" id = "<%= i %>" name="image_mst_id[]" value=<%= image.id %>> <img src=/assets/<%= image.filename %> name="image_mst_id[]" value=<%= image.id %> class="biela" width="250" /></td>
+	<input type="hidden" name="image_mst_org_id[]" value=<%= image.id %> >
+  <% end %>
+</tr>
+</table>
+<p>
+<input type="hidden" name="keyword_mst_id" value=<%= @keyword.id %> >
+  <div class="actions">
+    <%= f.submit "と思います" %>
+  </div>
+</p>
+<% end %>
+</center>

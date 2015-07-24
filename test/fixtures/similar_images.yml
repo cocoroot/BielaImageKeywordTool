@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image_msts_id: 1
+  keyword_msts_id: 1
+  inner_product: 1.5
+
+two:
+  image_msts_id: 1
+  keyword_msts_id: 1
+  inner_product: 1.5

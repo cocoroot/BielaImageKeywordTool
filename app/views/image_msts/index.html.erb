@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Image Msts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Filename</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @image_msts.each do |image_mst| %>
+      <tr>
+        <td><%= image_mst.filename %></td>
+        <td><%= link_to 'Show', image_mst %></td>
+        <td><%= link_to 'Edit', edit_image_mst_path(image_mst) %></td>
+        <td><%= link_to 'Destroy', image_mst, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Image mst', new_image_mst_path %>

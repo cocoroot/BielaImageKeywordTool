@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Similar Images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image msts</th>
+      <th>Keyword msts</th>
+      <th>Inner product</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @similar_images.each do |similar_image| %>
+      <tr>
+        <td><%= similar_image.image_msts_id %></td>
+        <td><%= similar_image.keyword_msts_id %></td>
+        <td><%= similar_image.inner_product %></td>
+        <td><%= link_to 'Show', similar_image %></td>
+        <td><%= link_to 'Edit', edit_similar_image_path(similar_image) %></td>
+        <td><%= link_to 'Destroy', similar_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Similar image', new_similar_image_path %>

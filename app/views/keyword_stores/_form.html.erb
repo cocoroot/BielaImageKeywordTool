@@ -1,0 +1,25 @@
+<%= form_for(@keyword_store) do |f| %>
+  <% if @keyword_store.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@keyword_store.errors.count, "error") %> prohibited this keyword_store from being saved:</h2>
+
+      <ul>
+      <% @keyword_store.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image_mst_id %><br>
+    <%= f.number_field :image_mst_id %>
+  </div>
+  <div class="field">
+    <%= f.label :keyword_mst_id %><br>
+    <%= f.number_field :keyword_mst_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

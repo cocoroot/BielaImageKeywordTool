@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image mst:</strong>
+  <%= @keyword_ignore.image_mst_id %>
+</p>
+
+<p>
+  <strong>Keyword mst:</strong>
+  <%= @keyword_ignore.keyword_mst_id %>
+</p>
+
+<%= link_to 'Edit', edit_keyword_ignore_path(@keyword_ignore) %> |
+<%= link_to 'Back', keyword_ignores_path %>
